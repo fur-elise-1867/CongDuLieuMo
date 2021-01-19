@@ -22,3 +22,22 @@ $(".btn-close").click(function (e) {
     $(".navbar-collapse").removeClass("show");
     $("body").removeClass("offcanvas-active");
 }); 
+
+
+
+
+$(".coltrol--menu").unbind();
+$(".coltrol--menu").click(function (e) {
+    e.preventDefault();
+    $(this).toggleClass("activeMenu");
+    $(this).parent('.cols--menu').toggleClass("activeMenu");
+    $('.cols--body').toggleClass("activeMenu");
+    $('.btn--not-bg > span').toggleClass("hide");
+    $('.btn--not-bg > i.far').toggleClass("hide");
+});
+
+
+$(".btn--not-bg").unbind();
+$(".btn--not-bg").click(function (e) {
+    // e.stopPropagation();
+});

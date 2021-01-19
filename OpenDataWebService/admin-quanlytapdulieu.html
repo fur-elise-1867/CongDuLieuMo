@@ -62,7 +62,7 @@
 
             <div class="nav-item dropdown ml-auto dropleft d-flex">
                 <img src="assets/img/admin/avatar.svg" alt="" width="35px" height="35px">
-                <label class="nav-link my-0 cursor-pointer" data-toggle="dropdown"> Nguyen Van A </label>
+                <label class="nav-link my-0 cursor-pointer text-white" data-toggle="dropdown"> Nguyen Van A </label>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
                     <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
@@ -75,8 +75,28 @@
 
     <div class="container-fluid wrapper">
         <div class="row">
-            <div class="col-xl-2"></div>
-            <div class="col-xl-10"></div>
+
+            <div class="cols--menu flex-center">
+                <i class="far text-white fa-chevron-double-right coltrol--menu cursor-pointer"></i>
+                <div class="nav-item dropdown d-flex">
+                    <a class="btn btn--not-bg my-0 cursor-pointer text-white" data-toggle="dropdown">
+                        <i class="fas fa-cog"></i> 
+                        <span class="ml-2 hide">Quản trị</span> 
+                        <i class="far fa-chevron-down ml-5 hide"></i>
+                    </a>
+                    <ul class="dropdown-menu fade-up p-0 rounded-0">
+                        <li><a class="dropdown-item py-2 bg-light">Submenu 1</a></li>
+                        <li><a class="dropdown-item py-2 bg-light">Submenu 2</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cols--body container-fluid">
+                <div class="row">
+
+                </div>
+            </div>
+
         </div>
     </div>
 
