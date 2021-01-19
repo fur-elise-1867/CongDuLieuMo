@@ -1,0 +1,35 @@
+.body-tab--authen, .head-tab--authen {
+    padding: 0 40px;
+}
+
+.link--authen {
+    color: #113355;
+}
+
+.submit--authen {
+    width: 140px;
+    height: 40px;
+    background: rgba(17, 51, 85, 1);
+    font-weight: 700;
+    font-style: normal;
+    color: #fff;
+    font-size: 13px;
+}
+
+.body-tab--authen .form-group label {
+    color: #333333;
+}
+
+.head-tab--authen>li>a {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    color: #333333;
+    border: 0;
+    line-height: 1.3;
+}
+
+.head-tab--authen>li>a.active {
+    border-bottom: 2px solid rgba(153, 153, 153, 1) !important;
+    color: #333333 !important;
+}

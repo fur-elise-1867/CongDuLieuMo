@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Icon -->
+    <link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+
+
+    <header class="container-fluid py-3 shadow d-flex">
+
+        <div class="logo flex-center-y">
+            <div class="line-y line-y__1st"></div>
+            <div class="line-y line-y__2nd"></div>
+            <div class="line-y line-y__3rd"></div>
+            <div class="line-y line-y__4th"></div>
+            <div class="line-y line-y__5th"></div>
+            <div class="line-y line-y__center"></div>
+            <div class="line-y line-y__5th"></div>
+            <div class="line-y line-y__4th"></div>
+            <div class="line-y line-y__3rd"></div>
+            <div class="line-y line-y__2nd"></div>
+            <div class="line-y line-y__1st"></div>
+        </div>
+
+        <div class="brand-text flex-center-y">
+            <h3 class="my-0 text-uppercase">cần thơ | cổng dữ liệu mở</h3>
+        </div>
+
+        <div class="d-flex ml-auto mr-0">
+            <nav class="navbar navbar-dark px-0">
+                <button class="navbar-toggler border-secondary" type="button" data-trigger="#main_nav">
+                    <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+                </button>
+                <div class="navbar-collapse" id="main_nav">
+                    <div class="offcanvas-header mt-3">
+                        <button class="btn btn-outline-danger btn-close float-right"> &times Close </button>
+                        <h5 class="py-2 text-white">Main navbar</h5>
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active"> <a class="nav-link" href="#">Home </a> </li>
+                        <li class="nav-item"><a class="nav-link" href="#"> About </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"> Services </a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+
+    <div class="container-fluid wrapper mt-5">
+
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs head-tab--authen border-0">
+            <li class="nav-item mr-5">
+                <a class="nav-link border-0 p-0 active" data-toggle="tab" href="#dangky">Đăng ký</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link border-0 p-0" data-toggle="tab" href="#dangnhap">Đăng nhập</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link border-0 p-0" data-toggle="tab" href="#laylaimatkhau">Lấy lại mật khẩu</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content body-tab--authen mt-5">
+            <div class="tab-pane container-fluid px-0 active" id="dangky">
+
+                <div class="">
+                    <div class="form-group">
+                        <label>Họ tên <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>Mật khẩu <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>Nhập lại mật khẩu <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>Email <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label>Thông tin giới thiệu <span class="text-danger">*</span></label>
+                        <textarea class="form-control form-control-sm" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <a class="mr-5 link--authen" href="#"><label>Đăng nhập</label></a>
+                        <a class="link--authen" href="#"><label>Lấy lại mật khẩu</label></a>
+                    </div>
+
+                    <button type="button" class="btn btn-default submit--authen">Đăng ký</button>
+                </div>
+
+            </div>
+
+            <div class="tab-pane container-fluid px-0  fade" id="dangnhap">
+                <div class="">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>Mật khẩu</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+
+
+                    <div class="form-group">
+                        <a class="mr-5 link--authen" href="#"><label>Đăng ký</label></a>
+                        <a class="link--authen" href="#"><label>Lấy lại mật khẩu</label></a>
+                    </div>
+
+                    <button type="button" class="btn btn-default submit--authen">Đăng nhập</button>
+                </div>
+            </div>
+
+            <div class="tab-pane container-fluid px-0  fade" id="laylaimatkhau">
+                <div class="">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <a class="mr-5 link--authen" href="#"><label>Đăng ký</label></a>
+                        <a class="link--authen" href="#"><label>Đăng nhập</label></a>
+                    </div>
+
+                    <button type="button" class="btn btn-default submit--authen">Lấy lại mật khẩu</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer class="container-fluid flex-center-y">
+
+        <div class="cols--1">
+            <p class="text-white mb-0">Lượt truy cập: 189208</p>
+            <p class="text-white mb-0">Trực tuyến: 850</p>
+        </div>
+
+        <div class="cols--2">
+            <h5 class="text-white mb-0">CHÍNH QUYỀN ĐIỆN TỬ THÀNH PHỐ CẦN THƠ</h5>
+            <h5 class="text-white mb-0">&copy; BẢN QUYỀN THUỘC SỞ THÔNG TIN TRUYỀN THÔNG CẦN THƠ</h5>
+        </div>
+
+        <div class="cols--3">
+            <p class="text-white mb-0">Hỗ trợ trực tuyến: 0292 3811 502</p>
+            <p class="text-white mb-0">Email: @cantho.gov.vn</p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
+<script src="assets/js/main.js"></script>
