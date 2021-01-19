@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+header {
+
+    min-height: 60px;
+}
+
+footer {
+    background: rgba(0, 194, 146, 1);
+    min-height: 90px;
+}
+
+.wrapper {
+    min-height: 800px;
+    background: #fff;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center-x {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-center-y {
+    display: flex;
+    align-items: center;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* ============================================================== */
+
+
+.cols--2>h5:first-child {
+
+    font-weight: 700;
+}
+
+.cols--2>h5 {
+    font-size: 14px;
+}
+
+.cols--1,
+.cols--2,
+.cols--3 {
+    min-height: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+.cols--1 p,
+.cols--2 h5,
+.cols--3 p {
+    line-height: 1;
+}
+
+.cols--1 {
+    width: 17%;
+    padding-left: 3%;
+}
+
+.cols--2 {
+    width: 63%;
+    padding-left: 3%;
+    border-left: 1px solid #fff;
+}
+
+.cols--3 {
+    width: 20%;
+}
+
+
+
+/* ============================================================== */
+
+
+.offcanvas-header {
+    display: none;
+}
+
+.top__menu {
+    height: 35px;
+}
+
+.bottom__header {
+    background: rgba(0, 194, 146, 1);
+    min-height: 60px;
+}
+
+.top__menu ul.navbar-nav.w-100 a {
+    color: #000;
+}
+
+
+.custom--navbar {}
+
+
+/* ============================================================== */
+/* ============================================================== */
+/* ============================================================== */
+/* ============================================================== */
+/* ============================================================== */
+/* ============================================================== */
+/* ============================================================== */
+/* ============================================================== */
+/* ============================================================== */
+
+
+
+@media (max-width: 1200px) {
+    .offcanvas-header {
+        display: block;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+        background-color: black;
+        transition: visibility .2s ease-in-out, -webkit-transform .2s ease-in-out;
+    }
+
+    .navbar-collapse.show {
+        visibility: visible;
+        transform: translateX(-100%);
+    }
+
+    .top__menu {
+        height: fit-content;
+        ;
+    }
+
+    .top__menu ul.navbar-nav.w-100 a, .top__menu ul.navbar-nav.w-100 a:hover, .top__menu ul.navbar-nav.w-100 a:focus, .top__menu ul.navbar-nav.w-100 li.active a {
+        color: #fff;
+    }
+
+}
