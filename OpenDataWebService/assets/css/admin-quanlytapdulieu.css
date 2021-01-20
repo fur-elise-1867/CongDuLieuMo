@@ -2,10 +2,8 @@
     transition: 0.5s;
     min-height: 600px;
     background: rgba(85, 85, 85, 1);
-
     position: relative;
     width: 100%;
-
     -ms-flex: 0 0 60px;
     flex: 0 0 60px;
     max-width: 60px;
@@ -14,11 +12,10 @@
 .cols--body {
     transition: 0.5s;
     min-height: 600px;
-    background: rgb(218, 218, 218);
-
+    /* background: rgb(218, 218, 218); */
+    background: #fff;
     position: relative;
     width: 100%;
-
     -ms-flex: 0 0 calc(100% - 60px);
     flex: 0 0 calc(100% - 60px);
     max-width: calc(100% - 60px);
@@ -58,3 +55,132 @@
     transition: 0.5s;
     transform: rotate(180deg);
 }
+
+/* ============================================================== */
+
+.cols--body__title {
+    font-weight: 700;
+    font-style: normal;
+    border-bottom: 2px solid #aaaaaa;
+    font-size: 14px;
+}
+
+/* ============================================================== */
+
+.ribbon {
+    display: grid;
+    font-size: 15px;
+    grid-gap: 1px;
+    grid-template-columns: repeat(3, 1fr) 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    width: 100%;
+}
+.ribbon__element {
+    background-color: #11d295;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    line-height: 1.333em;
+    /* padding: 0.667em 0.667em 0.667em 1.333em; */
+    position: relative;
+    text-decoration: none;
+    padding: 1em 0;
+}
+
+
+.ribbon__element:nth-child(1) {
+    z-index: 3;
+    margin-right: 15px;
+}
+.ribbon__element:nth-child(2) {
+    z-index: 2;
+    margin-right: 15px;
+}
+.ribbon__element:nth-child(3) {
+    z-index: 1;
+}
+
+.ribbon__element {
+    background-color: #d9d9d9;
+}
+.ribbon__element.done {
+    background-color: #a9d18e;
+}
+
+
+.ribbon--alpha .ribbon__element:before {
+    border-bottom: 1.657em solid transparent;
+    border-left: 1em solid;
+    border-top: 1.657em solid transparent;
+    bottom: 0;
+    content: '';
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+
+.ribbon--alpha .ribbon__element:nth-child(1):before {
+    border-bottom: none;
+    border-left: none;
+}
+
+.ribbon--alpha .ribbon__element:after {
+    border-bottom: 1.657em solid transparent;
+    border-left: 1em solid;
+    border-top: 1.657em solid transparent;
+    bottom: 0;
+    content: '';
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(1em);
+    width: 0;
+}
+
+
+
+/* .ribbon--alpha .ribbon__element:nth-child(1):after {
+    border-left-color: #11d295;
+}
+.ribbon--alpha .ribbon__element:nth-child(2):after {
+    border-left-color: #ef3675;
+}
+.ribbon--alpha .ribbon__element:nth-child(3):after {
+    border-left-color: #4cd4e9;
+} */
+
+.ribbon--alpha .ribbon__element::after {
+    border-left-color: #d9d9d9;
+}
+.ribbon--alpha .ribbon__element.done::after {
+    border-left-color: #a9d18e;
+}
+
+
+
+.ribbon__element:hover, .ribbon__element:active {
+    color: inherit;
+    text-decoration: underline;
+}
+.ribbon__element:focus {
+    box-shadow: 0 -3px 0 0 #343435 inset;
+    outline: none;
+}
+.ribbon__element:visited {
+    color: #fff;
+}
+
+/* ============================================================== */
+
+/* ============================================================== */
+
+/* ============================================================== */
+
+/* ============================================================== */
+
+/* ============================================================== */
