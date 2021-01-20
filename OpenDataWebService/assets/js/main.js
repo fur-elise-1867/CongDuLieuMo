@@ -43,9 +43,14 @@ $(".btn--not-bg").click(function (e) {
 });
 
 $(function () {
-    $("#sel1 , #sel2 , #sel3 , #sel4").select2({
-        placeholder: "Lựa chọn"
-    });
+
+    try {
+        $("#sel1 , #sel2 , #sel3 , #sel4").select2({
+            placeholder: "Lựa chọn"
+        });
+    } catch (error) {
+    
+    }
 
 
     function readURL(input) {
@@ -66,7 +71,33 @@ $(function () {
         readURL(this);
     });
 
+
+    // Upload btn on change call function
+    $(".uploadlogo").change(function () {
+        var filename = readURL(this);
+        $(this).parent().children('span').html(filename.length > 28 ? filename.slice(0, 25) + '...' : filename);
+    });
+    // Read File and return value  
+    function readURL(input) {
+        var url = input.value;
+        let ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+        if (input.files && input.files[0] && (
+            ext == "png" || ext == "jpeg" || ext == "jpg" || ext == "gif" || ext == "pdf"
+        )) {
+            var path = $(input).val();
+            var filename = path.replace(/^.*\\/, "");
+            // $('.fileUpload span').html('Uploaded Proof : ' + filename);
+            return "File: " + filename;
+        } else {
+            $(input).val("");
+            return "Only image/pdf formats are allowed!";
+        }
+    }
+    // Upload btn end
+
 });
+
+
 
 
 
