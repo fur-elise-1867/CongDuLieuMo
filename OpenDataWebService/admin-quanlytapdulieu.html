@@ -17,6 +17,8 @@
     <!-- Icon -->
     <link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="assets/lib/select2.min.css">
+
     <link rel="stylesheet" href="assets/css/admin-style.css">
     <link rel="stylesheet" href="assets/css/admin-quanlytapdulieu.css">
 </head>
@@ -80,8 +82,8 @@
                 <i class="far text-white fa-chevron-double-right coltrol--menu cursor-pointer"></i>
                 <div class="nav-item dropdown d-flex">
                     <a class="btn btn--not-bg my-0 cursor-pointer text-white" data-toggle="dropdown">
-                        <i class="fas fa-cog"></i> 
-                        <span class="ml-2 hide">Quản trị</span> 
+                        <i class="fas fa-cog"></i>
+                        <span class="ml-2 hide">Quản trị</span>
                         <i class="far fa-chevron-down ml-5 hide"></i>
                     </a>
                     <ul class="dropdown-menu fade-up p-0 rounded-0">
@@ -101,7 +103,7 @@
                             <a class="ribbon__element flex-center-x done">Tạo mới tập dữ liệu</a>
                             <a class="ribbon__element flex-center-x" target="_blank">Thêm dữ liệu</a>
                             <a class="ribbon__element flex-center-x" aria-current="page" target="_blank">Dữ liệu bổ sung</a>
-                          </nav>
+                        </nav>
                     </div>
 
                     <div class="col-12 px-0 mt-3">
@@ -109,22 +111,152 @@
                             <label class="font-weight-bold">Tiêu đề <span class="text-danger">(*)</span></label>
                             <input type="text" class="form-control form-control-sm" placeholder="">
 
-                            <div class="input-group input-group-sm mt-2">
+                            <div class="input-group input-group-sm mt-2 url--dataset__1">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text">@</span>
+                                    <span class="input-group-text text-white border-0 px-1">/dataset/</span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Username">
-                              </div>
+                                <input type="text" class="form-control"
+                                    placeholder="Đường dẫn tập dữ liệu được lấy mặc định dạng '/dataset/tieu-de' và có thể chỉnh sửa">
+                            </div>
                         </div>
 
-                        
-                        <div class="form-group mb-4">
+
+                        <div class="form-group">
                             <label class="font-weight-bold">Mô tả <span class="text-danger">*</span></label>
                             <textarea class="form-control form-control-sm" cols="30" rows="10"></textarea>
                         </div>
-    
-    
-                        <button type="button" class="btn btn-default submit--authen">Đăng ký</button>
+
+                        <div class="form-group">
+                            <label class="font-weight-bold">Thẻ</label>
+                            <select class="form-control form-control-sm" id="sel1" multiple data-live-search="true">
+                                <option>Đầu tư</option>
+                                <option>Khí hậu</option>
+                                <option>Đất đai</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">Nhóm</label>
+                            <select class="form-control form-control-sm" id="sel2" multiple data-live-search="true">
+                                <option>Đầu tư</option>
+                                <option>Khí hậu</option>
+                                <option>Đất đai</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">Chủ đề</label>
+                            <select class="form-control form-control-sm" id="sel3" multiple data-live-search="true">
+                                <option>Đầu tư</option>
+                                <option>Khí hậu</option>
+                                <option>Đất đai</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">Giấy phép</label>
+                            <select class="form-control form-control-sm" id="sel4" multiple data-live-search="true">
+                                <option>Đầu tư</option>
+                                <option>Khí hậu</option>
+                                <option>Đất đai</option>
+                            </select>
+                        </div>
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-6 px-0">
+
+                                    <div class="upload--file done flex-center-y mb-3">
+                                        <div class="d-flex">
+                                            <i class="fal fa-file-pdf icon text-danger mr-3"></i>
+                                            <div>
+                                                <p class="mb-0 link">Tap tin dinh kem 1.signed.pd</p>
+                                                <p class="mb-0 loaded">(1,413K)</p>
+                                                <progress class="loading" value="0" max="100"></progress>
+                                            </div>
+                                        </div>
+                                        <i class="fal fa-times remote"></i>
+                                    </div>
+                                    <div class="upload--file done flex-center-y mb-3">
+                                        <div class="d-flex">
+                                            <i class="fal fa-file-excel icon text-success mr-3"></i>
+                                            <div>
+                                                <p class="mb-0 link">Tap tin dinh kem 1.signed.pd</p>
+                                                <p class="mb-0 loaded">(1,413K)</p>
+                                                <progress class="loading" value="0" max="100"></progress>
+                                            </div>
+                                        </div>
+                                        <i class="fal fa-times remote"></i>
+                                    </div>
+                                    <div class="upload--file flex-center-y mb-3">
+                                        <div class="d-flex">
+                                            <i class="fal fa-file-word icon text-primary mr-3"></i>
+                                            <div>
+                                                <p class="mb-0 link">Tap tin dinh kem 1.signed.pd</p>
+                                                <p class="mb-0 loaded">(1,413K)</p>
+                                                <progress class="loading" value="0" max="100"></progress>
+                                            </div>
+                                        </div>
+                                        <i class="fal fa-times remote"></i>
+                                    </div>
+
+                                </div>
+                                <div class="col-6"></div>
+
+
+                                <div class="col-6 upload--file__custom mb-5 mt-3 px-0">
+                                    <div>
+                                        <label for="imgInp" class="custom-file-upload">Chọn tập tin</label>
+                                        <input type="image" id="blah" />
+                                        <input type="file" id="imgInp" />
+                                    </div>
+                                </div>
+                                <div class="col-6 flex-center-x mb-5 mt-3" style="flex-direction: column;">
+                                    <p class="m-0 size-13">Kích thước của file phải nhỏ hơn <span
+                                            class="font-weight-bold">10 GB</span> </p>
+                                    <p class="m-0 size-13">Các định dạng cho phép: <span class="font-weight-bold">csv
+                                            html xls json xlsx doc docx rdf txt jpg png gif tiff pdf odf ods odt tsv tab
+                                            geojson xml zip kml kmz shp.</span> </p>
+                                </div>
+
+                                <div class="col-6 px-0">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Tác giả</label>
+                                        <input type="text" class="form-control form-control-sm" placeholder="">
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="form-group w-50">
+                                        <label class="font-weight-bold">Ngày phát hành</label>
+                                        <input type="date" class="form-control form-control-sm" placeholder="">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-5">
+                            <p class="font-weight-bold mb-2">Tùy chọn xuất bản</p>
+                            <div class="border p-2">
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" value="">Đã công bố
+                                </label>
+                              </div>
+                              <div class="form-check-inline">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" value="">Đưa lên trang chủ
+                                </label>
+                              </div>
+                              <div class="form-check-inline">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" value=""> <span>Đưa lên đầu danh sách</span> 
+                                </label>
+                              </div>
+                                
+                            </div>
+
+                        </div>
+
+
                     </div>
 
                 </div>
@@ -156,4 +288,5 @@
 </body>
 
 </html>
+<script src="assets/lib/select2.min.js"></script>
 <script src="assets/js/main.js"></script>

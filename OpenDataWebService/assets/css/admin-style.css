@@ -49,6 +49,18 @@ footer {
     display: none;
 }
 
+.size-12 {
+    font-size: 12px;
+}
+.size-13 {
+    font-size: 13px;
+}
+
+.form-check-inline label {
+    line-height: 1;
+    display: inline-flex;
+}
+
 /* ============================================================== */
 
 

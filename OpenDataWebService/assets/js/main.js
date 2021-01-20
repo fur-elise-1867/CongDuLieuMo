@@ -21,7 +21,7 @@ $(".btn-close").unbind();
 $(".btn-close").click(function (e) {
     $(".navbar-collapse").removeClass("show");
     $("body").removeClass("offcanvas-active");
-}); 
+});
 
 
 
@@ -41,3 +41,35 @@ $(".btn--not-bg").unbind();
 $(".btn--not-bg").click(function (e) {
     // e.stopPropagation();
 });
+
+$(function () {
+    $("#sel1 , #sel2 , #sel3 , #sel4").select2({
+        placeholder: "Lựa chọn"
+    });
+
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $("input[type='image']").click(function () {
+        $("input[id='imgInp']").click();
+    });
+    $("#imgInp").change(function () {
+        readURL(this);
+    });
+
+});
+
+
+
+
+
+
