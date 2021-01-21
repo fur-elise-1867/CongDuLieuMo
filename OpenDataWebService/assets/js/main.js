@@ -34,6 +34,15 @@ $(".coltrol--menu").click(function (e) {
     $('.cols--body').toggleClass("activeMenu");
     $('.btn--not-bg > span').toggleClass("hide");
     $('.btn--not-bg > i.far').toggleClass("hide");
+
+    // try {
+    //     $("#sel1 , #sel2 , #sel3 , #sel4").select2({
+    //         placeholder: "Lựa chọn"
+    //     });
+    // } catch (error) {
+    
+    // }
+
 });
 
 
