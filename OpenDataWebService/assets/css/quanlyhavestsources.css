@@ -25,11 +25,13 @@
 
 /* Quan ly tai nguyen  */
 
-.nav-tabs a[href='#api'], .nav-tabs a[href='#upload'] {
-    width: 114px;
+.nav-tabs a[href='#api'], .nav-tabs a[href='#upload'], .nav-tabs a[href='#remote'] {
+    min-width: 114px;
     height: 33px;
     font-size: 14px;
     color: #747474;
+
+    width: fit-content;
 
     border-color: #dee2e6 #dee2e6;
     text-align: center;
