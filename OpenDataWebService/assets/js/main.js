@@ -58,7 +58,7 @@ $(function () {
             placeholder: "Lựa chọn"
         });
     } catch (error) {
-    
+        console.log(error)
     }
 
 

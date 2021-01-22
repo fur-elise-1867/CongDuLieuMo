@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim kiem Quan Ly cac tap tin nang cao cho quan tri</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Icon -->
+    <link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/lib/select2.min.css">
+
+    <link rel="stylesheet" href="assets/css/admin-style.css">
+    <link rel="stylesheet" href="assets/css/quanlyhavestsources.css">
+
+
+</head>
+
+<body>
+
+
+    <header class="container-fluid">
+
+        <nav class="navbar px-0 navbar-expand-xl navbar-light top__menu">
+            <button class="navbar-toggler" type="button" data-trigger="#main_nav1">
+                <span class="navbar-toggler-icon text-white"></span>
+            </button>
+
+            <div class="navbar-collapse" id="main_nav1">
+                <div class="offcanvas-header mt-3">
+                    <button class="btn btn-outline-danger btn-close float-right"> &times Close </button>
+                    <h5 class="py-2 text-white">Main navbar</h5>
+                </div>
+
+                <ul class="navbar-nav w-100">
+                    <li class="nav-item active"> <a class="nav-link pl-lg-0" href="#">Dashbroad </a> </li>
+                    <li class="nav-item"><a class="nav-link" href="#"> Chuyên ngành Quận Huyện </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> Cấp phép xây dựng </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> HTTT Nông nghiệp </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> HTTT văn hóa du lịch </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> HTTT Thong tin truyền thông </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> HTTT Công thương </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> HTTT Nội vụ </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> Quản trị </a></li>
+
+                    <li class="nav-item d-none d-xl-block"><a class="nav-link custom--mega-menu"> <i
+                                class="fas fa-ellipsis-h"></i> </a></li>
+                </ul>
+            </div> <!-- navbar-collapse.// -->
+        </nav>
+
+        <div class="bottom__header row flex-center-y px-3">
+            <img src="assets/img/admin/logo.png" alt="" class="head--logo mr-3" width="50px" height="50px">
+            <p class="text-white font-weight-bold my-0 mr-3 text-uppercase">chính quyền điện tử thành phố cần thơ
+                &nbsp;&nbsp;&nbsp; |</p>
+            <p class="text-white m-0">Sở Thông tin và Truyền thông</p>
+
+
+            <div class="nav-item dropdown ml-auto dropleft d-flex">
+                <img src="assets/img/admin/avatar.svg" alt="" width="35px" height="35px">
+                <label class="nav-link my-0 cursor-pointer text-white" data-toggle="dropdown"> Nguyen Van A </label>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"> Item 1</a></li>
+                    <li><a class="dropdown-item" href="#"> Item 2 </a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </header>
+
+
+    <div class="container-fluid wrapper">
+        <div class="row">
+
+            <div class="cols--menu flex-center">
+                <i class="far text-white fa-chevron-double-right coltrol--menu cursor-pointer"></i>
+                <div class="nav-item dropdown d-flex">
+                    <a class="btn btn--not-bg my-0 cursor-pointer text-white" data-toggle="dropdown">
+                        <i class="fas fa-cog"></i>
+                        <span class="ml-2 hide">Quản trị</span>
+                        <i class="far fa-chevron-down ml-5 hide"></i>
+                    </a>
+                    <ul class="dropdown-menu fade-up p-0 rounded-0">
+                        <li><a class="dropdown-item py-2 bg-light">Submenu 1</a></li>
+                        <li><a class="dropdown-item py-2 bg-light">Submenu 2</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cols--body container-fluid p-3">
+                <div class="row mx-0">
+
+                    <div class="col-12 px-0 mb-3">
+                        <h4 class="cols--body__title text-uppercase m-0">DANH SÁCH TẬP TIN</h4>
+                    </div>
+
+
+
+                    <div class="col-6 px-0">
+                        <div class="form-group">
+                            <label class="font-weight-bold">Tên tập tin</label>
+                            <input type="text" class="form-control form-control-sm" placeholder="">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label class="font-weight-bold">Kiểu</label>
+                            <select class="form-control form-control-sm" id="sel3" multiple data-live-search="true"
+                                data-width="100%">
+                                <option>Đầu tư</option>
+                                <option>Khí hậu</option>
+                                <option>Đất đai</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label class="font-weight-bold">Định dạng</label>
+                            <select class="form-control form-control-sm" id="sel4" multiple data-live-search="true"
+                                data-width="100%" data-height="31px">
+                                <option>Đầu tư</option>
+                                <option>Khí hậu</option>
+                                <option>Đất đai</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-6 px-0 mb-3">
+                        <div class="form-group">
+                            <label class="font-weight-bold">Tác giả</label>
+                            <input type="text" class="form-control form-control-sm" placeholder="">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label class="font-weight-bold">Cập nhật từ ngày</label>
+                            <input type="date" class="form-control form-control-sm" placeholder="">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label class="font-weight-bold">Đến ngày</label>
+                            <input type="date" class="form-control form-control-sm" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <button type="button" class="btn btn-sm px-3 btn-success float-right">Thêm mới</button>
+                        <button type="button" class="btn btn-sm px-3 btn-default btn-secondary float-right mr-3">Tìm
+                            kiếm</button>
+                    </div>
+
+                    <div class="col-12 pl-lg-0 table-responsive">
+                        <table class="table table-bordered size-13">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="align-middle" style="width: 5%;">STT</th>
+                                    <th class="align-middle" style="width: 30%;">Tên tập tin</th>
+                                    <th class="align-middle" style="width: 7%;">Dung lượng</th>
+                                    <th class="align-middle" style="width: 10%;">Kiểu</th>
+                                    <th class="align-middle" style="width: 16%;">Tác giả</th>
+                                    <th class="align-middle" style="width: 10%;">Định dạng</th>
+                                    <th class="align-middle" style="width: 10%;">Ngày cập nhật</th>
+                                    <th class="align-middle" style="width: 12%;">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="align-middle">1</td>
+                                    <td class="align-middle"><a href="#">industryandtrade_market_price.csv</a></td>
+                                    <td class="align-middle">113.89 KB</td>
+                                    <td class="align-middle">Data</td>
+                                    <td class="align-middle">Nguyen Van A</td>
+                                    <td class="align-middle">CSV</td>
+                                    <td class="align-middle">16/11/2021</td>
+                                    <td class="align-middle text-center">
+                                        <i class="far size-17 cursor-pointer fa-pen text-primary mr-3"></i>
+                                        <i class="far size-17 cursor-pointer fa-trash-alt text-danger"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">1</td>
+                                    <td class="align-middle"><a href="#">industryandtrade_market_price.csv</a></td>
+                                    <td class="align-middle">113.89 KB</td>
+                                    <td class="align-middle">Data</td>
+                                    <td class="align-middle">Nguyen Van A</td>
+                                    <td class="align-middle">CSV</td>
+                                    <td class="align-middle">16/11/2021</td>
+                                    <td class="align-middle text-center">
+                                        <i class="far size-17 cursor-pointer fa-pen text-primary mr-3"></i>
+                                        <i class="far size-17 cursor-pointer fa-trash-alt text-danger"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">1</td>
+                                    <td class="align-middle"><a href="#">industryandtrade_market_price.csv</a></td>
+                                    <td class="align-middle">113.89 KB</td>
+                                    <td class="align-middle">Data</td>
+                                    <td class="align-middle">Nguyen Van A</td>
+                                    <td class="align-middle">CSV</td>
+                                    <td class="align-middle">16/11/2021</td>
+                                    <td class="align-middle text-center">
+                                        <i class="far size-17 cursor-pointer fa-pen text-primary mr-3"></i>
+                                        <i class="far size-17 cursor-pointer fa-trash-alt text-danger"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">1</td>
+                                    <td class="align-middle"><a href="#">industryandtrade_market_price.csv</a></td>
+                                    <td class="align-middle">113.89 KB</td>
+                                    <td class="align-middle">Data</td>
+                                    <td class="align-middle">Nguyen Van A</td>
+                                    <td class="align-middle">CSV</td>
+                                    <td class="align-middle">16/11/2021</td>
+                                    <td class="align-middle text-center">
+                                        <i class="far size-17 cursor-pointer fa-pen text-primary mr-3"></i>
+                                        <i class="far size-17 cursor-pointer fa-trash-alt text-danger"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">1</td>
+                                    <td class="align-middle"><a href="#">industryandtrade_market_price.csv</a></td>
+                                    <td class="align-middle">113.89 KB</td>
+                                    <td class="align-middle">Data</td>
+                                    <td class="align-middle">Nguyen Van A</td>
+                                    <td class="align-middle">CSV</td>
+                                    <td class="align-middle">16/11/2021</td>
+                                    <td class="align-middle text-center">
+                                        <i class="far size-17 cursor-pointer fa-pen text-primary mr-3"></i>
+                                        <i class="far size-17 cursor-pointer fa-trash-alt text-danger"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">1</td>
+                                    <td class="align-middle"><a href="#">industryandtrade_market_price.csv</a></td>
+                                    <td class="align-middle">113.89 KB</td>
+                                    <td class="align-middle">Data</td>
+                                    <td class="align-middle">Nguyen Van A</td>
+                                    <td class="align-middle">CSV</td>
+                                    <td class="align-middle">16/11/2021</td>
+                                    <td class="align-middle text-center">
+                                        <i class="far size-17 cursor-pointer fa-pen text-primary mr-3"></i>
+                                        <i class="far size-17 cursor-pointer fa-trash-alt text-danger"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">1</td>
+                                    <td class="align-middle"><a href="#">industryandtrade_market_price.csv</a></td>
+                                    <td class="align-middle">113.89 KB</td>
+                                    <td class="align-middle">Data</td>
+                                    <td class="align-middle">Nguyen Van A</td>
+                                    <td class="align-middle">CSV</td>
+                                    <td class="align-middle">16/11/2021</td>
+                                    <td class="align-middle text-center">
+                                        <i class="far size-17 cursor-pointer fa-pen text-primary mr-3"></i>
+                                        <i class="far size-17 cursor-pointer fa-trash-alt text-danger"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">1</td>
+                                    <td class="align-middle"><a href="#">industryandtrade_market_price.csv</a></td>
+                                    <td class="align-middle">113.89 KB</td>
+                                    <td class="align-middle">Data</td>
+                                    <td class="align-middle">Nguyen Van A</td>
+                                    <td class="align-middle">CSV</td>
+                                    <td class="align-middle">16/11/2021</td>
+                                    <td class="align-middle text-center">
+                                        <i class="far size-17 cursor-pointer fa-pen text-primary mr-3"></i>
+                                        <i class="far size-17 cursor-pointer fa-trash-alt text-danger"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">1</td>
+                                    <td class="align-middle"><a href="#">industryandtrade_market_price.csv</a></td>
+                                    <td class="align-middle">113.89 KB</td>
+                                    <td class="align-middle">Data</td>
+                                    <td class="align-middle">Nguyen Van A</td>
+                                    <td class="align-middle">CSV</td>
+                                    <td class="align-middle">16/11/2021</td>
+                                    <td class="align-middle text-center">
+                                        <i class="far size-17 cursor-pointer fa-pen text-primary mr-3"></i>
+                                        <i class="far size-17 cursor-pointer fa-trash-alt text-danger"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">1</td>
+                                    <td class="align-middle"><a href="#">industryandtrade_market_price.csv</a></td>
+                                    <td class="align-middle">113.89 KB</td>
+                                    <td class="align-middle">Data</td>
+                                    <td class="align-middle">Nguyen Van A</td>
+                                    <td class="align-middle">CSV</td>
+                                    <td class="align-middle">16/11/2021</td>
+                                    <td class="align-middle text-center">
+                                        <i class="far size-17 cursor-pointer fa-pen text-primary mr-3"></i>
+                                        <i class="far size-17 cursor-pointer fa-trash-alt text-danger"></i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="flex-center-y">
+                            <ul class="pagination mw-100 mr-3 m-0">
+                                <li class="page-item"><a class="page-link" href="javascript:void(0);"><i class="fal fa-angle-double-left"></i></a></li>
+                                <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+                                <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                                <li class="page-item"><a class="page-link" href="javascript:void(0);"><i class="fal fa-angle-double-right"></i></a></li>
+                            </ul>
+                            <div class="form-inline">
+                                <label class="size-13">Số mẫu tin trên trang</label>
+                                <select class="form-control form-control-sm ml-4">
+                                    <option>10</option>
+                                    <option>20</option>
+                                    <option>50</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer class="container-fluid flex-center-y">
+
+        <div class="cols--1">
+            <p class="text-white mb-0">Lượt truy cập: 189208</p>
+            <p class="text-white mb-0">Trực tuyến: 850</p>
+        </div>
+
+        <div class="cols--2">
+            <h5 class="text-white mb-0">CHÍNH QUYỀN ĐIỆN TỬ THÀNH PHỐ CẦN THƠ</h5>
+            <h5 class="text-white mb-0">&copy; BẢN QUYỀN THUỘC SỞ THÔNG TIN TRUYỀN THÔNG CẦN THƠ</h5>
+        </div>
+
+        <div class="cols--3">
+            <p class="text-white mb-0">Hỗ trợ trực tuyến: 0292 3811 502</p>
+            <p class="text-white mb-0">Email: @cantho.gov.vn</p>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
+<script src="assets/lib/select2.min.js"></script>
+<script src="assets/js/main.js"></script>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/quanlyhavestsources.css">
 
 </head>
+
 <body>
 
     <header class="container-fluid">
@@ -96,100 +98,236 @@
             <div class="cols--body container-fluid p-3">
                 <div class="row mx-0">
 
-                    <h4 class="cols--body__title">THÊM HARVEST SOURCE</h4>
+                    <h4 class="cols--body__title text-uppercase">thêm tài nguyên</h4>
 
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs col-12 px-0 border-0 my-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#upload">Tải lên</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#api">API</a>
+                        </li>
+                    </ul>
 
+                    <!-- Tab panes -->
+                    <div class="tab-content col-12">
 
-                    <div class="col-12 px-0 mt-3">
-
-                        <div class="form-group">
-                            <label class="font-weight-bold">Tên <span class="text-danger">(*)</span></label>
-                            <input type="text" class="form-control form-control-sm" placeholder="">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="font-weight-bold">URL <span class="text-danger">(*)</span></label>
-                            <input type="text" class="form-control form-control-sm" placeholder="">
-                        </div>
-
-
-                        <div class="container-fluid">
+                        <!-- tab 1 -->
+                        <div class="tab-pane container-fluid active" id="upload">
 
                             <div class="row">
-                                <div class="form-group col-6 pl-lg-0">
-                                    <label class="font-weight-bold">Loại <span class="text-danger">(*)</span></label>
-                                    <select class="form-control form-control-sm" id="sel1" multiple
-                                        data-live-search="true">
-                                        <option>Đầu tư</option>
-                                        <option>Khí hậu</option>
-                                        <option>Đất đai</option>
-                                    </select>
+                                
+                                <div class="col-6 upload--file__custom mb-5 mt-3 px-0">
+                                    <label class="font-weight-bold w-100">Tập tin tải lên <span class="text-danger">(*)</span></label>
+                                    <div>
+                                        <label for="imgInp" class="custom-file-upload">Chọn tập tin</label>
+                                        <input type="image" id="blah" />
+                                        <input type="file" id="imgInp" />
+                                    </div>
                                 </div>
-                                <div class="form-group col-6 pr-lg-0">
-                                    <label class="font-weight-bold">Thuộc tổ chức <span
-                                            class="text-danger">(*)</span></label>
-                                    <input type="text" class="form-control form-control-sm" placeholder="">
+                                <div class="col-6 flex-center-x my-3" style="flex-direction: column;">
+                                    <p class="m-0 size-13 font-italic">Kích thước của file phải nhỏ hơn <span class="font-weight-bold">10 GB</span> </p>
+                                    <p class="m-0 size-13 font-italic">Các định dạng cho phép: <span class="font-weight-bold">csv pdf, kml, SHP.</span> </p>
+                                </div>
+
+                                <div class="col-12 px-0">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Tiêu đề <span class="text-danger">(*)</span></label>
+                                        <input type="text" class="form-control form-control-sm" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Mô tả</label>
+                                        <textarea class="form-control form-control-sm" cols="30" rows="10"></textarea>
+                                    </div>
+
+                                    <table class="table table-bordered mb-3">
+                                        <thead>
+                                          <tr>
+                                            <th style="width: 60%;"><label class="font-weight-bold m-0">Tập dữ liệu <span class="text-danger">(*)</span></label></th>
+                                            <th style="width: 40%;"><label class="font-weight-bold m-0">Thứ tự</label></th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                                <select class="form-control form-control-sm" id="sel1" multiple data-live-search="true" data-width="100%">
+                                                    <option>Đầu tư</option>
+                                                    <option>Khí hậu</option>
+                                                    <option>Đất đai</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <div class="form-inline">
+                                                    <input type="text" class="form-control form-control-sm mr-3 w-50" placeholder="">
+                                                    <label class="size-13 font-italic">Nhập số nguyên</label>
+                                                </div>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td colspan="2">
+                                                <button class="btn btn-sm btn-outline-secondary bg-light">Thêm</button>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+
+                                <div class="col-6 px-0">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Tác giả</label>
+                                        <input type="text" class="form-control form-control-sm" placeholder="">
+                                    </div>
+                                </div>
+
+                                <div class="col-6 px-lg-3 px-0">
+                                    <div class="form-group w-50">
+                                        <label class="font-weight-bold">Ngày phát hành</label>
+                                        <input type="date" class="form-control form-control-sm" placeholder="">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 px-0 mt-3">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Tùy chọn xuất bản</label>
+                                        <div class="border px-2 pb-2 pt-3">
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                              <input type="checkbox" class="form-check-input" value="">Đã công bố
+                                            </label>
+                                          </div>
+                                          <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                              <input type="checkbox" class="form-check-input" value="">Đưa lên trang chủ
+                                            </label>
+                                          </div>
+                                          <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                              <input type="checkbox" class="form-check-input" value=""> <span>Đưa lên đầu danh sách</span> 
+                                            </label>
+                                          </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check-inline mb-4">
+                                        <label class="form-check-label">
+                                          <input type="checkbox" class="form-check-input" value=""> <span class="font-weight-bold">Tự động tạo URL alias</span> 
+                                        </label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Thông tin bản duyệt</label>
+                                        <textarea class="form-control form-control-sm" cols="30" rows="10"></textarea>
+                                        <label class="size-13 font-italic mt-2">Mô tả một lời giải thích của những thay đổi bạn đang làm.Điều này sẽ giúp các tác giả khác hiểu mục đích của bạn.</label>
+                                    </div>
                                 </div>
 
                             </div>
 
                         </div>
 
+                        <!-- tab 2 -->
+                        <div class="tab-pane container-fluid fade" id="api">
 
 
+                            <div class="row">
 
-                        <div class="form-group">
-                            <label class="font-weight-bold">Mô tả <span class="text-danger">*</span></label>
-                            <textarea class="form-control form-control-sm" cols="30" rows="10"></textarea>
-                        </div>
+                                <div class="col-12 px-0">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Chọn API <span class="text-danger">(*)</span></label>
+                                        <select class="form-control form-control-sm" id="sel3" multiple data-live-search="true" data-width="100%">
+                                            <option>Đầu tư</option>
+                                            <option>Khí hậu</option>
+                                            <option>Đất đai</option>
+                                        </select>
+                                        <label class="size-13 font-italic mt-2">Chọn API từ kho dữ liệu.</label>
+                                    </div>
 
-                        <div class="form-group">
-                            <label class="font-weight-bold">Tác giả <span class="text-danger">(*)</span></label>
-                            <input type="text" class="form-control form-control-sm" placeholder="">
-                        </div>
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Cập nhật tần suất</label>
+                                        <select class="form-control form-control-sm w-50" id="sel4" multiple data-live-search="true" data-width="100%">
+                                            <option>Đầu tư</option>
+                                            <option>Khí hậu</option>
+                                            <option>Đất đai</option>
+                                        </select>
+                                    </div>
 
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Tiêu đề <span class="text-danger">(*)</span></label>
+                                        <input type="text" class="form-control form-control-sm" placeholder="">
+                                    </div>
 
+                                    <div class="form-group mb-5 pb-5">
+                                        <label class="font-weight-bold">Mô tả</label>
+                                        <textarea class="form-control form-control-sm mb-5" cols="30" rows="10"></textarea>
+                                    </div>
 
-
-
-
-
-                        <div class="form-group mb-5">
-                            <p class="font-weight-bold mb-2">Tùy chọn xuất bản</p>
-                            <div class="border px-2 pt-3 pb-2">
-                                <div class="form-check-inline">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">Đã công bố
-                                    </label>
+                                    <button class="btn btn-sm btn-outline-secondary bg-light mb-4">Thêm</button>
                                 </div>
-                                <div class="form-check-inline">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">Đưa lên trang chủ
-                                    </label>
+
+                                <div class="col-6 px-0">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Tác giả</label>
+                                        <input type="text" class="form-control form-control-sm" placeholder="">
+                                    </div>
                                 </div>
-                                <div class="form-check-inline">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value=""> <span>Đưa lên đầu danh
-                                            sách</span>
-                                    </label>
+
+                                <div class="col-6 px-lg-3 px-0">
+                                    <div class="form-group w-50">
+                                        <label class="font-weight-bold">Ngày phát hành</label>
+                                        <input type="date" class="form-control form-control-sm" placeholder="">
+                                    </div>
                                 </div>
+
+                                <div class="col-12 px-0 mt-3">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Tùy chọn xuất bản</label>
+                                        <div class="border px-2 pb-2 pt-3">
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                              <input type="checkbox" class="form-check-input" value="">Đã công bố
+                                            </label>
+                                          </div>
+                                          <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                              <input type="checkbox" class="form-check-input" value="">Đưa lên trang chủ
+                                            </label>
+                                          </div>
+                                          <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                              <input type="checkbox" class="form-check-input" value=""> <span>Đưa lên đầu danh sách</span> 
+                                            </label>
+                                          </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check-inline mb-4">
+                                        <label class="form-check-label">
+                                          <input type="checkbox" class="form-check-input" value=""> <span class="font-weight-bold">Tự động tạo URL alias</span> 
+                                        </label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Thông tin bản duyệt</label>
+                                        <textarea class="form-control form-control-sm" cols="30" rows="10"></textarea>
+                                        <label class="size-13 font-italic mt-2">Mô tả một lời giải thích của những thay đổi bạn đang làm.Điều này sẽ giúp các tác giả khác hiểu mục đích của bạn.</label>
+                                    </div>
+                                </div>
+
+
+
+
+
 
                             </div>
 
+
                         </div>
-
-                        <div class="col-12 px-0 mb-5">
-                            <button type="button" class="btn btn-default submit--authen mr-3">Lưu</button>
-                            <button type="button" class="btn btn-default submit--authen bg-secondary">Trở về</button>
-                        </div>
-
-
 
                     </div>
 
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -215,8 +353,9 @@
 
     </footer>
 
-    
+
 </body>
+
 </html>
 <script src="assets/lib/select2.min.js"></script>
 <script src="assets/js/main.js"></script>
